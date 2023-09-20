@@ -41,7 +41,7 @@ export default function Articles() {
         return (
             <section>
                 <div>
-                    <h3>Latest Articles</h3>
+                    <h3>Feeds</h3>
                     <ul>
                         <p>Failed to fetch data, please try again later.</p>
                     </ul>
@@ -54,7 +54,7 @@ export default function Articles() {
         <>
             <section>
                 <div className='container'>
-                    <h3 className='latest'>Latest Articles</h3>
+                    <h3 className='latest'>Feeds</h3>
                     {isLoading ?
                         <p>Loading...</p>
                         :
@@ -63,7 +63,7 @@ export default function Articles() {
                                 <li key={index}>
                                     <a href={item.link} target={"_blank"}>
                                         <div className='thumbnailArea'>
-                                            <img src={item.thumbnail} alt={item.title} width={480} height={270} />
+                                            <img src={item.thumbnail} alt={item.title} />
                                         </div>
                                         <h3>{item.title}</h3>
                                         <div className="row">
